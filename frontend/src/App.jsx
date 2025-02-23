@@ -8,46 +8,48 @@ import Landing from "./pages/Landing";
 import LogIn from "./pages/LogIn";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import { supabase } from './supabase'
 
 
 function App() {
-  return (
-     <div>
-    {/* <BucketList /> */}
-
-    {/* <Matches /> */}
-
-    {/* <Profile /> */}
-
-    {/* <HomePage /> */}
-    
-    {/* <Landing /> */}
-
-    <LogIn />
-
-     {/* <SignUp /> */}
-    {/* //  <Header /> */}
-
-    {/* <Recommendations />  */}
-
-
-   </div>
-
-    
-  );
-
   // return (
-  //   <Router>
-  //     <Header />
-  //     <Routes>
-        
-  //       <Route path="/mybucket" element={<BucketList />} />
-  //       <Route path="/matches" element={<Matches />} />
-  //       {/* <Route path="/messages" element={<Messages />} /> */}
-  //       <Route path="/profile" element={<Profile />} />
-  //     </Routes>
-  //   </Router>
+  //    <div>
+  //   {/* <BucketList /> */}
+
+  //   {/* <Matches /> */}
+
+  //   {/* <Profile /> */}
+
+  //   {/* <HomePage /> */}
+    
+  //   {/* <Landing /> */}
+
+  //   <LogIn />
+
+  //    {/* <SignUp /> */}
+  //   {/* //  <Header /> */}
+
+  //   {/* <Recommendations />  */}
+
+
+  //  </div>
+
+    
   // );
+
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        
+        <Route path="/mybucket" element={<BucketList />} />
+        <Route path="/matches" element={<Matches />} />
+        {/* <Route path="/messages" element={<Messages />} /> */}
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Router>
+
+  );
 }
 
 export default App;
